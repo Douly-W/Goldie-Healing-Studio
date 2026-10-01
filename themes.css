@@ -1,0 +1,120 @@
+
+/* Page identities and centered navigation. Loaded after base and home styles. */
+:root{--font:"Avenir Next","Avenir","STHeiti","Heiti SC","Microsoft YaHei",sans-serif}
+body{font-family:var(--font);font-weight:400;letter-spacing:.25px;--page:#faf7ef;--wash:#eee6d9;--accent:#816648;--deep:#635037;--muted:#786d61;--edge:#d9cfbe;--text:#39362f}
+body.theme-home{--page:#faf7ef;--wash:#e5ece4;--accent:#69806a;--deep:#4f6550;--edge:#d5d9cb;--muted:#747262;--text:#383b31}
+body.theme-about{--page:#faf7ef;--wash:#e5ece4;--accent:#69806a;--deep:#4f6550;--edge:#d5d9cb;--muted:#747262;--text:#383b31}
+body.theme-jewelry{--page:#AB9B82;--wash:#c8bca7;--accent:#594831;--deep:#3f3223;--edge:#8e7c61;--muted:#4c402f;--text:#30291f}
+body.theme-candles{--page:#5F1B15;--wash:#76382f;--accent:#f0c6ad;--deep:#ffe3cd;--edge:#b07864;--muted:#efd0bd;--text:#fff3e7}
+body.theme-tarot{--page:#44271F;--wash:#613c30;--accent:#e4b79b;--deep:#f6dac6;--edge:#986852;--muted:#dfc1ad;--text:#fff1e4}
+body,body.home-light{background:var(--page);color:var(--text)}body:before,body.home-light:before{background-color:var(--page);opacity:.025}body:after{background:none}
+h1,h2,h3,.home-light h1,.home-light h2{font-family:var(--font);font-weight:400;letter-spacing:1px}.page-head h1{font-size:44px;letter-spacing:2px}.page-head p,.panel>p,.about-copy p,p,.small,.footnote,.dialog-note{color:var(--muted)}
+.header,.home-light .header{top:0;margin-top:0}.nav,.home-light .nav{display:grid;grid-template-columns:minmax(190px,1fr) auto minmax(190px,1fr);align-items:center;min-height:92px;padding:15px 22px;gap:12px;background:color-mix(in srgb,var(--page) 88%,transparent);border:0;border-bottom:1px solid var(--edge);border-radius:0;box-shadow:none;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.brand,.home-light .brand{grid-column:1;justify-self:start;gap:10px}.brand img,.home-light .brand img{width:42px;height:42px;border-radius:0}.brand strong,.home-light .brand strong{font-size:18px;font-weight:400;letter-spacing:2px}.brand small,.home-light .brand small{font-size:8px;letter-spacing:.5px;color:var(--muted)}
+.navlinks,.home-light .navlinks{grid-column:2;display:flex;justify-content:center;align-items:center;gap:14px;width:auto;flex:none;flex-wrap:nowrap}.navlinks a,.home-light .navlinks a{display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:400;letter-spacing:.7px;min-height:44px;padding:9px 13px;border:0;border-bottom:2px solid transparent;border-radius:0;color:var(--muted);white-space:nowrap}.navlinks a:hover,.home-light .navlinks a:hover{background:transparent;color:var(--deep);border-bottom-color:var(--edge)}.navlinks a[aria-current=page]{background:transparent;border-color:var(--accent);color:var(--deep)}
+.preview-note{background:var(--wash);color:var(--muted);font-size:9px}.eyebrow,.crumb,.field,.price,.steps b,.status{color:var(--accent)}.glass{background:color-mix(in srgb,var(--page) 75%,white);border:1px solid var(--edge);box-shadow:none;border-radius:14px}.panel{background:#ffffff85}.field input,.field select,.field textarea{background:#ffffffad;color:var(--text);border-color:var(--edge);border-radius:7px;font-family:var(--font);font-size:14px}.field select option{color:var(--text);background:var(--page)}.button{background:var(--accent);border-color:var(--accent);color:#fff;letter-spacing:1px;font-weight:400}.button:hover{background:var(--deep);border-color:var(--deep)}.button.secondary,.socials button{background:var(--wash);border-color:var(--edge);color:var(--deep)}.socials button:hover{background:var(--edge)}.product-figure img{background:var(--wash)}.product-figure figcaption,.footer,.home-light .footer{color:var(--muted);border-color:var(--edge)}.price-row,.steps li{border-color:var(--edge)}.steps li{color:var(--muted)}.moon{color:var(--accent)}.logo-panel img{mix-blend-mode:multiply}.summary{background:var(--wash);color:var(--text)}dialog{background:var(--page);color:var(--text);border-color:var(--edge)}dialog::backdrop{background:#4b46595c}.close{color:var(--deep)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:var(--accent)}
+/* Each inner page has its own composition as well as color. */
+.theme-about .page-head{padding:25px 0 20px;border-bottom:1px solid var(--edge)}.theme-about .about-grid{grid-template-columns:1fr 1.5fr;gap:0;background:#ffffff6b;border:1px solid var(--edge);border-radius:14px;overflow:hidden}.theme-about .logo-panel{background:var(--wash);border:0;border-radius:0}.theme-about .about-copy{border:0;background:transparent;padding:45px;border-radius:0}.theme-about .info-row .glass{border:0;border-left:3px solid var(--edge);border-radius:0;background:transparent}
+.theme-jewelry .page-head{text-align:center;margin:34px auto 28px}.theme-jewelry .page-head p{margin:12px auto 0}.theme-jewelry .product-figure{background:var(--wash);padding:22px;border-radius:2px}.theme-jewelry .product-figure img{border-radius:0}.theme-jewelry .panel{border-radius:2px}.theme-jewelry .info-row .glass{border-radius:2px}
+.theme-candles .page-head{border-left:4px solid var(--accent);padding-left:23px}.theme-candles .detail-grid{grid-template-columns:1.2fr 1fr}.theme-candles .product-figure{border:0;background:var(--wash);padding:15px 15px 5px;border-radius:22px}.theme-candles .panel{border-radius:22px}.theme-candles .info-row .glass{background:var(--wash);border:0}
+.theme-tarot .page-head{text-align:center;margin:34px auto 28px}.theme-tarot .page-head p{margin:12px auto 0}.theme-tarot .detail-grid{grid-template-columns:.85fr 1.15fr;gap:35px}.theme-tarot .tarot-intro{background:linear-gradient(160deg,var(--wash),#fbf8ffb0);border-radius:90px 90px 12px 12px;padding:52px 35px 35px}.theme-tarot .tarot-intro .moon{text-align:center}.theme-tarot .tarot-intro h2{font-size:32px;line-height:1.5}.theme-tarot .panel{background:#ffffffb0}
+/* Home remains a sparse brand cover with sage and apricot details. */
+.home-light .identity-column{border-top:3px solid #a6b7a0}.home-light .edition{padding-top:13px}.home-light .edition span:first-child{color:#657b62}.home-light .identity-bottom p{color:#6c7865;font-family:var(--font);font-size:15px;letter-spacing:1px}.home-light .floating-label{background:#edf1e3c9;border-color:#f7fff0bd}.home-light .floating-label small{color:#63775c}.home-light .floating-label strong{color:#40533d;font-family:var(--font);font-size:18px}.home-light .main-photo{border-bottom:7px solid #d6b18b}.home-light .footer{border-top:1px solid #d5d9cb}.home-light .identity-column h1 img{mix-blend-mode:multiply}
+@media(max-width:1100px){.nav,.home-light .nav{grid-template-columns:1fr;gap:5px;padding:11px 12px;min-height:0}.brand,.home-light .brand{grid-column:1;justify-self:center}.navlinks,.home-light .navlinks{grid-column:1;justify-self:center;gap:20px}.navlinks a,.home-light .navlinks a{font-size:14px;padding:8px 15px}.brand img,.home-light .brand img{width:34px;height:34px}.brand strong,.home-light .brand strong{font-size:16px}}
+@media(max-width:720px){.navlinks,.home-light .navlinks{gap:5px;width:100%;justify-content:center}.navlinks a,.home-light .navlinks a{font-size:13px;padding:8px 8px;min-height:42px;letter-spacing:0}.nav,.home-light .nav{padding:10px 0 4px}.page-head h1{font-size:34px}.theme-about .about-grid,.theme-candles .detail-grid,.theme-tarot .detail-grid{grid-template-columns:1fr}.theme-about .about-copy{padding:26px}.theme-about .logo-panel{padding:22px}.theme-jewelry .product-figure{padding:14px}.theme-tarot .tarot-intro{border-radius:50px 50px 12px 12px;padding:32px 26px}.theme-tarot .detail-grid{gap:20px}.theme-candles .page-head{padding-left:16px}.theme-about .page-head{padding-top:5px}.home-light .identity-bottom p{font-size:13px}.home-light .floating-label strong{font-size:17px}}
+@media(max-width:360px){.navlinks a,.home-light .navlinks a{font-size:12px;padding:8px 5px}}
+@supports not (background:color-mix(in srgb,white 50%,transparent)){.nav,.home-light .nav{background:var(--page)}.glass{background:var(--page)}}
+
+.theme-about .logo-panel{background:linear-gradient(135deg,#f9edc9 0%,#dfc481 48%,#f6e8bd 100%)}.theme-about .page-head h1{color:#89661f}.theme-candles .page-head h1,.theme-candles .panel h2{color:var(--accent)}
+
+/* Text wordmark and uncropped personal photograph. */
+.brand strong,.home-light .brand strong{font-size:20px;letter-spacing:3px;font-weight:400}.brand small,.home-light .brand small{display:block;font-size:9px;letter-spacing:.8px;margin-top:5px}
+.home-light .personal-home{display:block;padding-top:24px}.home-light .personal-home .identity-column{display:grid;grid-template-columns:230px 1fr;column-gap:48px;border-top:0;padding:0;align-items:center}.personal-home .edition{grid-column:1/-1;padding:0 0 6px}.personal-home h1{grid-column:1;grid-row:2;margin:0}.home-light .personal-home h1 img{display:block;width:210px;height:215px;max-height:none;margin:0;object-fit:contain}.home-light .personal-home .identity-bottom{grid-column:2;grid-row:2;padding:0}.home-light .personal-home .identity-bottom p{max-width:none;line-height:2.1;font-size:16px}.home-light .personal-photo{margin:12px 0 0;aspect-ratio:auto;max-height:none;border:0;background:transparent;overflow:visible}.home-light .personal-photo img{width:100%;height:auto;display:block;object-fit:contain;object-position:center}.home-light .personal-home .edition span:first-child{color:#6c7865}
+@media(max-width:720px){.home-light .personal-home{padding-top:18px}.home-light .personal-home .identity-column{grid-template-columns:135px 1fr;gap:8px 17px}.home-light .personal-home h1 img{width:135px;height:140px}.home-light .personal-home .identity-bottom p{font-size:12px;line-height:1.9;letter-spacing:0}.personal-home .edition{font-size:8px;padding:0}.home-light .personal-photo{margin-top:17px}.brand strong,.home-light .brand strong{font-size:18px}.brand small,.home-light .brand small{font-size:8px;margin-top:3px}}
+
+.portrait-link{display:block;cursor:pointer}.portrait-link:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+
+/* Fragrance: soft aqua, distinct from the existing page palettes. */
+body.theme-fragrance{--page:#61532E;--wash:#796941;--accent:#ead9ae;--deep:#f7ebce;--edge:#99855c;--muted:#e0d2b3;--text:#fff4dd}
+.theme-fragrance .page-head{text-align:center}.theme-fragrance .page-head p{margin:12px auto 0}.fragrance-grid{grid-template-columns:.9fr 1.1fr;gap:30px}.fragrance-intro{padding:38px;background:linear-gradient(145deg,#d8eae1,#f6faf4);border-radius:60px 12px 12px 12px}.fragrance-intro h2{font-size:34px;line-height:1.5;margin:20px 0}.fragrance-intro>p{font-size:14px;line-height:2}.scent-notes{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}.scent-notes span{font-size:12px;padding:7px 16px;border:1px solid var(--edge);border-radius:30px;background:#ffffff6b;color:var(--deep)}.fragrance-process{border-top:1px solid var(--edge);padding-top:23px;margin:30px 0}.fragrance-process h3{font-size:17px;margin-bottom:12px}.fragrance-process p{font-size:12px;line-height:2}.fragrance-intro .footnote{font-size:11px}
+.navlinks,.home-light .navlinks{gap:8px}.navlinks a,.home-light .navlinks a{padding:9px 11px;font-size:14px}
+@media(max-width:1200px){.nav,.home-light .nav{grid-template-columns:1fr;gap:5px;padding:11px 12px;min-height:0}.brand,.home-light .brand{grid-column:1;justify-self:center}.navlinks,.home-light .navlinks{grid-column:1;justify-self:center;justify-content:center;gap:12px;flex-wrap:wrap}.brand strong,.home-light .brand strong{font-size:17px}}
+@media(max-width:720px){.fragrance-grid{grid-template-columns:1fr;gap:20px}.fragrance-intro{padding:28px;border-radius:40px 12px 12px 12px}.fragrance-intro h2{font-size:29px}.navlinks,.home-light .navlinks{gap:2px 5px;flex-wrap:wrap}.navlinks a,.home-light .navlinks a{font-size:12px;padding:8px 8px;min-height:42px}.nav,.home-light .nav{padding:10px 0 4px}}
+
+/* Exact requested page backgrounds; contrast adapted to each palette. */
+.theme-about .logo-panel{background:var(--wash)}.theme-about .page-head h1{color:var(--text)}
+.theme-jewelry .page-head h1{color:var(--text)}.theme-jewelry .glass{background:#f7f0e3c9}.theme-jewelry .product-figure{background:var(--wash)}.theme-jewelry .panel{background:#f7f0e3ed}
+body.theme-fragrance,body.theme-tarot{color-scheme:dark}
+.theme-fragrance:before,.theme-tarot:before{display:none}
+.theme-fragrance .nav,.theme-tarot .nav{background:var(--page)}
+.theme-fragrance .glass,.theme-tarot .glass,.theme-tarot .panel{background:var(--wash);border-color:var(--edge)}
+.theme-fragrance .fragrance-intro,.theme-tarot .tarot-intro{background:var(--wash)}
+.theme-fragrance .field input,.theme-fragrance .field select,.theme-fragrance .field textarea,.theme-tarot .field input,.theme-tarot .field select,.theme-tarot .field textarea{background:var(--page);color:var(--text);border-color:var(--edge)}
+.theme-fragrance .button,.theme-tarot .button{color:var(--page);background:var(--accent)}
+.theme-fragrance .button:hover,.theme-tarot .button:hover{background:var(--deep)}
+.theme-fragrance .scent-notes span{background:var(--page);color:var(--text)}
+.theme-fragrance dialog,.theme-tarot dialog{color-scheme:dark;background:var(--page);color:var(--text)}
+.theme-fragrance .summary,.theme-tarot .summary{background:var(--wash)}
+
+/* Confirmed deep brick red candle palette. */
+body.theme-candles{color-scheme:dark}.theme-candles:before{display:none}.theme-candles .nav{background:var(--page)}.theme-candles .glass,.theme-candles .panel,.theme-candles .product-figure,.theme-candles .info-row .glass{background:var(--wash);border-color:var(--edge)}.theme-candles .field input,.theme-candles .field select,.theme-candles .field textarea{background:var(--page);color:var(--text);border-color:var(--edge)}.theme-candles .button{color:var(--page);background:var(--accent)}.theme-candles .button:hover{background:var(--deep)}.theme-candles dialog{color-scheme:dark;background:var(--page);color:var(--text)}.theme-candles .summary{background:var(--wash)}
+
+/* Bundled LXGW WenKai: regular handwritten Chinese and matching Latin. */
+@font-face{font-family:"Goldie WenKai";src:url("assets/fonts/LXGWWenKai-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+:root{--font:"Goldie WenKai","Kaiti SC","STKaiti",serif}
+body,body.home-light,button,input,select,textarea{font-family:var(--font)}
+h1,h2,h3,.home-light h1,.home-light h2,.brand strong,.home-light .brand strong{font-family:var(--font);font-weight:400;font-synthesis:none}
+.navlinks a,.home-light .navlinks a{font-size:16px;letter-spacing:.5px}.page-head h1{letter-spacing:1px}.field input,.field select,.field textarea{font-size:15px}.panel>p,.about-copy p,.fragrance-intro>p{line-height:2}.home-light .personal-home .identity-bottom p{font-size:18px;line-height:1.9}
+@media(max-width:720px){.navlinks a,.home-light .navlinks a{font-size:14px;padding:8px 7px}.home-light .personal-home .identity-bottom p{font-size:14px}.brand strong,.home-light .brand strong{font-size:20px}}
+@media(max-width:360px){.navlinks a,.home-light .navlinks a{font-size:13px}}
+
+/* About me's nested editorial sections. */
+.about-subnav{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:0 0 28px;padding:12px;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}.about-subnav a{padding:7px 17px;font-size:15px;color:var(--muted);border-radius:20px}.about-subnav a:hover{background:var(--wash);color:var(--deep)}.about-subnav a[aria-current=page]{background:var(--wash);color:var(--deep)}.navlinks a[aria-current=location]{border-color:var(--accent);color:var(--deep)}.about-channels{margin-top:45px}.channel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.about-channel{display:flex;flex-direction:column;padding:28px;min-height:230px}.channel-number{font-size:12px;color:var(--accent)}.about-channel h3{font-size:28px;margin:20px 0 12px}.about-channel p{font-size:14px;margin-bottom:25px}.channel-action{margin-top:auto;font-size:13px;color:var(--accent)}.about-channel:hover{background:var(--wash)}.channel-empty{min-height:350px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:50px 28px;background:linear-gradient(140deg,var(--page),var(--wash))}.channel-label{font-size:12px;padding:5px 15px;border:1px solid var(--edge);border-radius:20px;color:var(--accent)}.channel-empty h2{font-size:30px;margin:24px 0 16px}.channel-empty p{font-size:14px}
+@media(max-width:720px){.about-subnav{gap:4px;padding:9px 0}.about-subnav a{font-size:13px;padding:7px 10px}.channel-grid{grid-template-columns:1fr;gap:14px}.about-channel{min-height:0;padding:23px}.about-channel h3{margin-top:10px;font-size:26px}.about-channel p{margin-bottom:20px}.channel-empty{min-height:290px;padding:35px 22px}.channel-empty h2{font-size:25px}.about-channels{margin-top:30px}}
+
+/* Translucent tinted glass for candle, fragrance and Tarot pages. */
+body.theme-candles{color-scheme:light;--page:#f7eeeb;--wash:#eddbd5;--accent:#5F1B15;--deep:#48130f;--edge:#5f1b1530;--muted:#795a54;--text:#462b26;--tint:95,27,21}
+body.theme-fragrance{color-scheme:light;--page:#f5f2e9;--wash:#e9e3d0;--accent:#61532E;--deep:#493e22;--edge:#61532e30;--muted:#756b4f;--text:#403b29;--tint:97,83,46}
+body.theme-tarot{color-scheme:light;--page:#f5efec;--wash:#e7dcd5;--accent:#44271F;--deep:#321b15;--edge:#44271f30;--muted:#79675e;--text:#3d2c25;--tint:68,39,31}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot){isolation:isolate;background:var(--page);color:var(--text)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot):before{display:block;opacity:1;mix-blend-mode:normal;z-index:-2;background:radial-gradient(ellipse at 6% 15%,rgba(var(--tint),.21),transparent 48%),radial-gradient(ellipse at 94% 75%,rgba(var(--tint),.16),transparent 47%),linear-gradient(130deg,#fffdf880,var(--page));background-attachment:fixed}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot):after{display:block;z-index:-1;background:url('assets/logo-paper.jpg') 82% 42%/min(75vw,760px) auto no-repeat;opacity:.045;mix-blend-mode:multiply;pointer-events:none}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .nav{background:#fffdf85e;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid #ffffffad}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) :is(.glass,.panel,.product-figure,.tarot-intro,.fragrance-intro,.info-row .glass){background:linear-gradient(130deg,#ffffff88,#fffdf82b);border:1px solid #ffffffa6;box-shadow:inset 0 1px 0 #ffffffb8,0 12px 35px rgba(var(--tint),.055);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .product-figure img{background:transparent}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) :is(.field input,.field select,.field textarea){color-scheme:light;background:#ffffff66;color:var(--text);border-color:rgba(var(--tint),.22);box-shadow:inset 0 1px 0 #ffffff9c}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .field select option{background:var(--page);color:var(--text)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .button{background:var(--accent);border-color:var(--accent);color:#fffaf3}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .button:hover{background:var(--deep);border-color:var(--deep)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .scent-notes span{background:#ffffff55;color:var(--deep);border-color:var(--edge)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) dialog{color-scheme:light;background:linear-gradient(140deg,#fffcf7f0,#fffaf2d9);color:var(--text);border-color:#ffffffcc;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .summary{background:rgba(var(--tint),.07)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .preview-note{background:#ffffff4d;color:var(--muted)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){body:is(.theme-candles,.theme-fragrance,.theme-tarot) :is(.glass,.nav,.panel,.product-figure,.tarot-intro,.fragrance-intro){background:#fffaf2e8}}
+
+/* Deeper tinted glass: stronger color without returning to opaque dark blocks. */
+body.theme-candles{--page:#cc9c94;--wash:#d9b5ab;--accent:#5F1B15;--deep:#48130f;--edge:#5f1b1540;--muted:#60342e;--text:#3f211c}
+body.theme-fragrance{--page:#bfb38e;--wash:#d0c5a5;--accent:#61532E;--deep:#493e22;--edge:#61532e40;--muted:#544a2d;--text:#37301f}
+body.theme-tarot{--page:#b8a094;--wash:#ccbaae;--accent:#44271F;--deep:#321b15;--edge:#44271f40;--muted:#5b4035;--text:#35231d}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot):before{background:radial-gradient(ellipse at 6% 15%,rgba(var(--tint),.32),transparent 48%),radial-gradient(ellipse at 94% 75%,rgba(var(--tint),.25),transparent 47%),linear-gradient(130deg,#fffdf82b,var(--page))}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) :is(.glass,.panel,.product-figure,.tarot-intro,.fragrance-intro,.info-row .glass){background:linear-gradient(130deg,#ffffff54,rgba(var(--tint),.08));border-color:#ffffff70;box-shadow:inset 0 1px 0 #ffffff70,0 12px 35px rgba(var(--tint),.08)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .nav{background:#fffdf833;border-color:#ffffff70}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){body:is(.theme-candles,.theme-fragrance,.theme-tarot) :is(.glass,.nav,.panel,.product-figure,.tarot-intro,.fragrance-intro){background:var(--wash)}}
+
+/* Rich colored glass, using the requested colors as the actual page base. */
+body.theme-candles{color-scheme:dark;--page:#5F1B15;--wash:#783e35;--accent:#f2c8ae;--deep:#ffe8d3;--edge:#d3a18b66;--muted:#f0d4c3;--text:#fff5e9}
+body.theme-fragrance{color-scheme:dark;--page:#61532E;--wash:#7b6b46;--accent:#f0dfb3;--deep:#fff0cc;--edge:#d0bb8966;--muted:#e8ddbf;--text:#fff7df}
+body.theme-tarot{color-scheme:dark;--page:#44271F;--wash:#634539;--accent:#eec5a9;--deep:#ffe5cf;--edge:#c79c8266;--muted:#e8cdb9;--text:#fff2e4}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot):before{background:radial-gradient(ellipse at 6% 15%,#fff0cf12,transparent 50%),radial-gradient(ellipse at 94% 75%,#00000030,transparent 48%),var(--page)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot):after{opacity:.02}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) :is(.glass,.panel,.product-figure,.tarot-intro,.fragrance-intro,.info-row .glass){background:linear-gradient(130deg,#fff7e519,#fff7e507);border-color:#ffe9ce40;box-shadow:inset 0 1px 0 #ffffff24,0 14px 40px #00000015;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .nav{background:#fff4e00c;border-color:#ffe9ce35}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) :is(.field input,.field select,.field textarea){color-scheme:dark;background:#0000001a;color:var(--text);border-color:var(--edge);box-shadow:none}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .field textarea::placeholder{color:var(--muted);opacity:.8}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .button{background:var(--accent);color:var(--page);border-color:var(--accent)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .button:hover{background:var(--deep);border-color:var(--deep)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .scent-notes span{background:#ffffff0c;color:var(--text)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) dialog{color-scheme:dark;background:var(--page);color:var(--text);border-color:var(--edge)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .summary{background:#ffffff0c;color:var(--text)}
+body:is(.theme-candles,.theme-fragrance,.theme-tarot) .preview-note{background:#00000016;color:var(--muted)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){body:is(.theme-candles,.theme-fragrance,.theme-tarot) :is(.glass,.nav,.panel,.product-figure,.tarot-intro,.fragrance-intro){background:var(--wash)}}
